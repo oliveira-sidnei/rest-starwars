@@ -2,11 +2,11 @@ package br.com.starwars.model;
 
 import org.bson.types.ObjectId;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.google.gson.annotations.Expose;
 
 import xyz.morphia.annotations.Entity;
 import xyz.morphia.annotations.Id;
@@ -16,12 +16,15 @@ import xyz.morphia.annotations.Transient;
 public class Planeta {
 	
 	@Id
-	@JsonIgnore
 	private ObjectId id;
+	@Expose
 	private String nome;
+	@Expose
 	private String clima;
+	@Expose
 	private String terreno;
 	@Transient
+	@Expose
 	private int quantidadeFilmes;
 	
 	public String getNome() {
@@ -47,15 +50,15 @@ public class Planeta {
 		this.terreno = terreno;
 	}
 	
-	@JsonIgnore
 	public ObjectId getId() {
 		return id;
 	}
+	
 	public String toJson() {
 		
-		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setPrettyPrinting().create();
 		JsonParser jp = new JsonParser();
-		JsonElement je = jp.parse(new Gson().toJson(this));
+		JsonElement je = jp.parse(gson.toJson(this));
 		
 		return gson.toJson(je);
 	}
