@@ -2,7 +2,7 @@
 
 Este projeto foi desenvolvido utilizando Java e MongoDB.
 
-Para rodar este projeto, deverá ser utilizado servidor Wildfly, este implementando RESTEasy.
+Para o deploy deste projeto, deverá ser utilizado servidor Wildfly, este implementando RESTEasy.
 
 URL base: servidor/apsw/planetas
 
