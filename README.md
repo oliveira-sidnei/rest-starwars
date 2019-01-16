@@ -6,7 +6,10 @@ Para o deploy deste projeto, deverá ser utilizado o servidor Wildfly.
 
 URL base: /apsw/planetas
 
-A API possui autenticação utilizando JWT (Json Web Token).
+A API possui autenticação utilizando JWT (Json Web Token), para que apenas um usuário autenticado possa utilizar os serviços de @POST e @DELETE, já todos os serviços tipo @GET estão abertos. 
+
+Para autenticação é necessário passar dois parâmetros no header:
+username e password, ambos tendo o valor "admin"
 
 Para utilizar os recursos GET, será necessário apenas chamar o serviço sem necessidade de autenticação. Os serviços do tipo GET são:
 
