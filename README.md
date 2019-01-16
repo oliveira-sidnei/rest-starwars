@@ -4,7 +4,7 @@ Este projeto foi desenvolvido utilizando Java e MongoDB.
 
 Para o deploy deste projeto, deverá ser utilizado o servidor Wildfly.
 
-URL base: /apsw/planetas
+URL base: **/apsw/planetas**
 
 A API possui autenticação utilizando JWT (Json Web Token), para que apenas um usuário autenticado possa utilizar os serviços de @POST e @DELETE, já todos os serviços tipo @GET estão abertos. 
 
