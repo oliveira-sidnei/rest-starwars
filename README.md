@@ -11,6 +11,8 @@ A API possui autenticação utilizando JWT (Json Web Token), para que apenas um 
 Para autenticação é necessário passar dois parâmetros no header:
 username e password, ambos tendo o valor "admin"
 
+![Exemplo Autenticação](https://drive.google.com/uc?export=view&id=1bcdngwJLR6tASkMtmk487g9-B4WLpWkp)
+
 Para utilizar os recursos **GET**, será necessário apenas chamar o serviço sem necessidade de autenticação. Os serviços do tipo GET são:
 
 Lista planetas:
@@ -30,6 +32,7 @@ Para o serviço de tipo **POST**, deverá ser fornecido no header, os parâmetro
 Adicionar Planetas:
 **/apsw/planetas**
 Deverá ser enviado no corpo o nome do planeta, clima e terreno para que seu cadastro possa ser feito. Estes deverão ser enviados em formato json.
+![Exemplo Post](https://drive.google.com/uc?export=view&id=1X_ikCbC8015Z72xWwtw1ZCF92iJNhlJr)
 
 Para o serviço de tipo **DELETE**,  deverá ser fornecido no header, os parâmetros username e password, ambos deverão ter valor "admin".
 
