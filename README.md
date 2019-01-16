@@ -39,6 +39,6 @@ Remove utilizando o Id atribuído.
 **/apsw/planetas/removePorId/{IdPlaneta}**
 
 Remove utilizando o nome.
-**/aspw/planetas/removePorNome/{nomePlaneta}**
+**/apsw/planetas/removePorNome/{nomePlaneta}**
 
 Todos as requisições descritas, são devidamente tratadas e retornam um HTTP Code e no caso de um erro, o HTTP Code de erro é retornado juntamente de uma mensagem explicativa.
